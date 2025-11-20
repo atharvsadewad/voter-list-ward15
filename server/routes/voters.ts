@@ -2,7 +2,7 @@ import { RequestHandler } from "express";
 import {
   SearchVotersResponse,
   mockVoterDatabase,
-} from "@shared/api";
+} from "../../shared/api";
 
 export const searchVoters: RequestHandler = (req, res) => {
   const { surname } = req.query;
