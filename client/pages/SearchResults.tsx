@@ -30,10 +30,7 @@ export default function SearchResults() {
         </header>
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <Link to="/">
-            <Button
-              variant="outline"
-              className="mb-6 flex items-center gap-2"
-            >
+            <Button variant="outline" className="mb-6 flex items-center gap-2">
               <ArrowLeft className="w-4 h-4" />
               वापस जाएं
             </Button>
@@ -66,10 +63,7 @@ export default function SearchResults() {
         {/* Back Button and Search Info */}
         <div className="mb-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <Link to="/">
-            <Button
-              variant="outline"
-              className="flex items-center gap-2 w-fit"
-            >
+            <Button variant="outline" className="flex items-center gap-2 w-fit">
               <ArrowLeft className="w-4 h-4" />
               वापस जाएं
             </Button>
@@ -183,8 +177,8 @@ export default function SearchResults() {
         {results.count > 0 && (
           <div className="mt-12 p-6 bg-blue-50 border border-blue-200 rounded-lg text-center">
             <p className="text-sm text-gray-700">
-              <span className="font-semibold">कुल:</span> {results.count}{" "}
-              मतदाता मिले
+              <span className="font-semibold">कुल:</span> {results.count} मतदाता
+              मिले
             </p>
           </div>
         )}

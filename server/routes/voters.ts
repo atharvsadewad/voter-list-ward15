@@ -1,8 +1,5 @@
 import { RequestHandler } from "express";
-import {
-  SearchVotersResponse,
-  mockVoterDatabase,
-} from "../../shared/api";
+import { SearchVotersResponse, mockVoterDatabase } from "../../shared/api";
 
 export const searchVoters: RequestHandler = (req, res) => {
   const { surname } = req.query;
@@ -19,7 +16,7 @@ export const searchVoters: RequestHandler = (req, res) => {
 
   // Case-insensitive search
   const results = mockVoterDatabase.filter((voter) =>
-    voter.surname.toLowerCase().includes(surname.toLowerCase())
+    voter.surname.toLowerCase().includes(surname.toLowerCase()),
   );
 
   const response: SearchVotersResponse = {

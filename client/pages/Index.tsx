@@ -16,7 +16,7 @@ export default function Index() {
     setIsSearching(true);
     try {
       const response = await fetch(
-        `/api/voters/search?surname=${encodeURIComponent(surname)}`
+        `/api/voters/search?surname=${encodeURIComponent(surname)}`,
       );
       const data = await response.json();
       navigate("/search-results", { state: { results: data } });
@@ -26,7 +26,14 @@ export default function Index() {
     }
   };
 
-  const suggestedSurnames = ["शर्मा", "पटेल", "भारती", "गुप्ता", "वर्मा", "सिंह"];
+  const suggestedSurnames = [
+    "शर्मा",
+    "पटेल",
+    "भारती",
+    "गुप्ता",
+    "वर्मा",
+    "सिंह",
+  ];
 
   const handleQuickSearch = (quickSurname: string) => {
     setSurname(quickSurname);
@@ -133,9 +140,7 @@ export default function Index() {
               <Zap className="w-6 h-6 text-indigo-600" />
             </div>
             <h4 className="font-semibold text-gray-900 mb-2">तत्काल खोज</h4>
-            <p className="text-sm text-gray-600">
-              सेकंड में मतदाता डेटा खोजें
-            </p>
+            <p className="text-sm text-gray-600">सेकंड में मतदाता डेटा खोजें</p>
           </div>
 
           <div className="p-6 bg-white rounded-xl border border-gray-200 hover:border-indigo-300 hover:shadow-lg transition-all">
